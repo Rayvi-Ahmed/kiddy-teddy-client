@@ -32,6 +32,16 @@ const AddToys = () => {
         }
         console.log(addProduct)
 
+        fetch('http://localhost:5000/postToys', {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(addProduct)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result)
+            })
+
 
     }
 
@@ -87,7 +97,7 @@ const AddToys = () => {
                             <span className="label-text">Sub Category</span>
                         </label>
                         <select name="Category" className="select select-bordered w-full max-w-xs">
-                            <option disabled selected>Teddy Bear</option>
+                            <option>Teddy Bear</option>
                             <option>Horse</option>
                             <option>Dinosaur</option>
                         </select>
