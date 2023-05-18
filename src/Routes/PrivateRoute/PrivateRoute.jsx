@@ -8,7 +8,7 @@ const PrivateRoute = ({ children }) => {
     const location = useLocation()
 
     if (loading) {
-        <progress className="progress w-56"></progress>
+        return <progress className="progress w-56"></progress>
     }
 
     if (user?.email) {
@@ -19,7 +19,7 @@ const PrivateRoute = ({ children }) => {
     return (
         <div>
             {toast.error("You must login first!")}
-            <Navigate to={'/login'} state={{ from: location }} replace></Navigate >;
+            <Navigate to='/login' state={{ from: location }} replace></Navigate >;
         </div>
     )
 
