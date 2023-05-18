@@ -7,11 +7,12 @@ import G6 from '../../assets/Images/G-6.jpg'
 import G7 from '../../assets/Images/G-7.jpg'
 import piku from '../../assets/Images/piku.jpeg'
 
+
 import banner from '../../assets/Images/Banner-3.jpg'
 
 const Gallery = () => {
     return (
-        <section className="py-6 bg-pink-800 mt-8 container mx-auto">
+        <section className=" py-6 bg-pink-800 mt-8 container mx-auto">
 
             <div className='font-bold text-4xl text-center m-3 text-gray-50'>
                 <h1>Toys Gallery</h1>
