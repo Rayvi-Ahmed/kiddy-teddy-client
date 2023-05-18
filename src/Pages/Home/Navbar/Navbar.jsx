@@ -33,8 +33,8 @@ const Navbar = () => {
                         <li>
                             <a
                                 href="/"
-                                aria-label="Our product"
-                                title="Our product"
+                                aria-label="Home"
+                                title="Home"
                                 className="font-medium tracking-wide  text-white  transition-colors duration-200 hover:text-pink-400"
                             >
                                 Home
@@ -43,8 +43,8 @@ const Navbar = () => {
                         <li>
                             <a
                                 href="/blog"
-                                aria-label="Our product"
-                                title="Our product"
+                                aria-label="Blog"
+                                title="Blog"
                                 className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-pink-400"
                             >
                                 Blog
@@ -53,11 +53,21 @@ const Navbar = () => {
                         <Link to={'/about'}>
                             <a
                                 href="/banner"
-                                aria-label="About us"
-                                title="About us"
+                                aria-label="All toys"
+                                title="All toys"
                                 className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-pink-400"
                             >
                                 All Toys
+                            </a>
+                        </Link>
+                        <Link to={'/addToys'}>
+                            <a
+                                href="/banner"
+                                aria-label="About us"
+                                title="Add toys"
+                                className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-pink-400"
+                            >
+                                Add Toys
                             </a>
                         </Link>
                     </ul>
@@ -96,6 +106,7 @@ const Navbar = () => {
                                         className="rounded-full h-10 w-10"
                                         src={user?.photoURL}
                                         alt=""
+                                        title={user?.displayName}
                                     />
                                 ) : (
                                     <FaUser className="white text-2xl"></FaUser>
@@ -177,8 +188,8 @@ const Navbar = () => {
                                             <li>
                                                 <a
                                                     href="/"
-                                                    aria-label="Our product"
-                                                    title="Our product"
+                                                    aria-label="Home"
+                                                    title="Home"
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-pink-400"
                                                 >
                                                     Home
@@ -187,8 +198,8 @@ const Navbar = () => {
                                             <li>
                                                 <a
                                                     href="/blog"
-                                                    aria-label="Our product"
-                                                    title="Our product"
+                                                    aria-label="Blog"
+                                                    title="Blog"
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-pink-400"
                                                 >
                                                     Blog
@@ -197,8 +208,8 @@ const Navbar = () => {
                                             <li>
                                                 <a
                                                     href="/banner"
-                                                    aria-label="About us"
-                                                    title="About us"
+                                                    aria-label="All toy"
+                                                    title="all toy"
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-pink-400"
                                                 >
                                                     All toy
