@@ -11,7 +11,7 @@ const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-    const googleProvider = new GoogleAuthProvider();
+    const googleProvider = new GoogleAuthProvider()
 
 
     const providerLogin = () => {
@@ -29,8 +29,6 @@ const AuthProvider = ({ children }) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
-
-
 
 
     const logOut = () => {

@@ -28,7 +28,7 @@ const Blog = () => {
 
                                 <p className="mt-3"> <span className='font-bold'>Express Js :</span> Express is a node js web application framework that provides broad features for building web and mobile applications.
 
-                                    <p> <span className='font-bold block'>Node Js :</span> Node. js is an open-source, cross-platform JavaScript runtime environment and library for running web applications outside the clients browser.</p>
+                                    <p> <span className='font-bold block'>Nest Js :</span> Nest. js is one of the fastest-growing Node. js frameworks for building efficient, scalable, and enterprise-grade backend applications using Node. js.</p>
 
                                 </p>
                             </div>
