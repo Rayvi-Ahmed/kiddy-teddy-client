@@ -60,6 +60,16 @@ const Navbar = () => {
                                 All Toys
                             </a>
                         </Link>
+                        <Link to={'/myToys'}>
+                            <a
+                                href="/banner"
+                                aria-label="My toys"
+                                title="My toys"
+                                className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-pink-400"
+                            >
+                                My Toys
+                            </a>
+                        </Link>
                         <Link to={'/addToys'}>
                             <a
                                 href="/banner"

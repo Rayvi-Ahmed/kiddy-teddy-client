@@ -1,16 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import ProductData from '../productData/ProductData';
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
+import MyToysData from '../MyToysData/MyToysData';
+import { toast } from 'react-hot-toast';
 
-const Alltoys = () => {
-    const [allToys, setAlltoys] = useState([])
+const MyToys = () => {
+
+    const { user } = useContext(AuthContext)
+    const [myToys, setMyToys] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/alltoys')
+        fetch(`http://localhost:5000/mytoys/${user?.email}`)
             .then(res => res.json())
             .then(result => {
-                setAlltoys(result)
+                console.log(result)
+                setMyToys(result)
             })
-    }, [])
+
+    }, [user])
+
 
     return (
         <div>
@@ -18,7 +25,7 @@ const Alltoys = () => {
                 <input type="text" placeholder="Search product name" className="input input-bordered input-secondary w-full max-w-xs " /> <button className='btn bg-pink-800 text-gray-100 mr-4 border-0 hover:bg-pink-400'>Search</button>
             </div>
 
-            <div className="overflow-x-auto w-full container mx-auto mt-5">
+            <div className="overflow-x-auto w-full container mx-auto mt-5 mb-8">
                 <table className="table w-full">
                     {/* head */}
                     <thead>
@@ -29,17 +36,19 @@ const Alltoys = () => {
                             <th>Sub Category</th>
                             <th>Price</th>
                             <th>Available Quantity</th>
-                            <th>Product Detail</th>
+                            <th className='text-center'>Toy description</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
 
-                        {
-                            allToys.map(toy => <ProductData
-                                key={toy._id}
-                                toy={toy}
+                        {myToys ? myToys.map(mytoy => <MyToysData
+                            key={mytoy._id}
+                            mytoy={mytoy}
 
-                            ></ProductData>)
+                        ></MyToysData>) : toast.error('No data found!')
+
                         }
 
                     </tbody>
@@ -52,4 +61,4 @@ const Alltoys = () => {
     );
 };
 
-export default Alltoys;
+export default MyToys;
