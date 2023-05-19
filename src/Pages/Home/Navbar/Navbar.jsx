@@ -50,7 +50,7 @@ const Navbar = () => {
                                 Blog
                             </a>
                         </li>
-                        <Link to={'/about'}>
+                        <Link to={'/allToys'}>
                             <a
                                 href="/banner"
                                 aria-label="All toys"
