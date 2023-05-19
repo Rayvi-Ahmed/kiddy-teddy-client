@@ -35,8 +35,8 @@ const MyToys = () => {
                             <th>Toy Name</th>
                             <th>Sub Category</th>
                             <th>Price</th>
-                            <th>Available Quantity</th>
-                            <th className='text-center'>Toy description</th>
+                            <th>Quantity</th>
+                            <th className='text-center'>description</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
