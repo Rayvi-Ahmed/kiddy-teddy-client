@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ProductData from '../productData/ProductData';
 
+
 const Alltoys = () => {
     const [allToys, setAlltoys] = useState([])
     const [searchText, setSearchText] = useState('')
@@ -20,6 +21,8 @@ const Alltoys = () => {
                 setAlltoys(result)
             })
     ]
+
+
 
     return (
         <div>
@@ -47,7 +50,6 @@ const Alltoys = () => {
                             allToys.map(toy => <ProductData
                                 key={toy._id}
                                 toy={toy}
-
                             ></ProductData>)
                         }
 
