@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { toast } from "react-hot-toast";
 
 const AddToys = () => {
     const { user } = useContext(AuthContext)
@@ -40,6 +41,12 @@ const AddToys = () => {
             .then(res => res.json())
             .then(result => {
                 console.log(result)
+                if (result.acknowledged
+                    == true) {
+                    toast.success('Product successfully added')
+                } else {
+                    toast.error("no product added")
+                }
             })
 
 
@@ -55,7 +62,7 @@ const AddToys = () => {
                         <label className="label">
                             <span className="label-text">Saller Name</span>
                         </label>
-                        <input type="text" defaultValue="" placeholder="Write saller name" name="name" className="input input-bordered" />
+                        <input type="text" value={user?.displayName} placeholder="Write saller name" name="name" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
