@@ -1,13 +1,17 @@
 import React, { useContext } from 'react';
 import { toast } from 'react-hot-toast';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
+import UseTitle from '../../Hooks/setTitle';
 
 const UpdateMyToys = () => {
-
-    const { user } = useContext(AuthContext)
+    // const { user } = useContext(AuthContext)
     const allToys = useLoaderData()
-    // const { _id, price, description, Quantity } = allToys
+    console.log(allToys)
+    const { id } = useParams()
+    const { _id, price, description, Quantity } = allToys
+    console.log(id)
+    UseTitle('Update product')
 
     const handleProductUpdate = event => {
         event.preventDefault()
@@ -25,7 +29,7 @@ const UpdateMyToys = () => {
         }
         console.log(UpdateProduct)
 
-        fetch(`http://localhost:5000/mytoys/${allToys._id}`, {
+        fetch(`http://localhost:5000/updatetoys/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
@@ -51,7 +55,7 @@ const UpdateMyToys = () => {
                         <label className="label">
                             <span className="label-text">Available Quantity</span>
                         </label>
-                        <input type="number" defaultValue="" placeholder="" name="Quantity" className="input input-bordered" />
+                        <input type="number" defaultValue={Quantity} placeholder="" name="Quantity" className="input input-bordered" />
                     </div>
 
                 </div>
@@ -61,14 +65,14 @@ const UpdateMyToys = () => {
                         <label className="label">
                             <span className="label-text">Price</span>
                         </label>
-                        <input name="price" type="text" defaultValue="" placeholder="$ price" className="input input-bordered" />
+                        <input name="price" type="text" defaultValue={price} placeholder="$ price" className="input input-bordered" />
 
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Description</span>
                         </label>
-                        <textarea name="description" className="textarea textarea-secondary" placeholder="Write a short description"></textarea>
+                        <textarea name="description" defaultValue={description} className="textarea textarea-secondary" placeholder="Write a short description"></textarea>
 
                     </div>
 

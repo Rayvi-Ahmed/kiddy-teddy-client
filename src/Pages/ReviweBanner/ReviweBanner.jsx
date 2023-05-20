@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DiscountProduct = () => {
+const ReviweBanner = () => {
     return (
         <div className="flex flex-col max-w-xl p-8 shadow-sm rounded-xl lg:p-12 bg-pink-800 text-gray-100 container mx-auto my-8">
             <div className="flex flex-col items-center w-full">
@@ -48,4 +48,4 @@ const DiscountProduct = () => {
     );
 };
 
-export default DiscountProduct;
+export default ReviweBanner;

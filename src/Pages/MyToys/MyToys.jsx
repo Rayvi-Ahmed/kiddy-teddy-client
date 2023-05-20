@@ -3,12 +3,14 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 import MyToysData from '../MyToysData/MyToysData';
 import { toast } from 'react-hot-toast';
 import { data } from 'autoprefixer';
+import UseTitle from '../../Hooks/setTitle';
 
 const MyToys = () => {
 
     const { user } = useContext(AuthContext)
     const [myToys, setMyToys] = useState([])
     // const [toysModal, setToysModal] =
+    UseTitle('My Toys')
 
     useEffect(() => {
         fetch(`http://localhost:5000/mytoys/${user?.email}`)

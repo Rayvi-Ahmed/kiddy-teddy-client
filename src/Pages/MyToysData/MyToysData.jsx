@@ -37,7 +37,7 @@ const MyToysData = ({ mytoy, handleToyDelete }) => {
 
             </td>
             <th>
-                <Link to={'/updateToys'}>
+                <Link to={`/updateToys/${_id}`}>
                     <button className="btn border-0 hover:bg-pink-400 bg-pink-800 text-gray-100 btn-sm">Edit</button>
                 </Link>
             </th>

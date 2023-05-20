@@ -6,6 +6,7 @@ import Category from '../Category/Category';
 const ShopCategory = () => {
     const [categorys, setCategory] = useState([])
     const [activeButton, setActiveButton] = useState('')
+    console.log(categorys)
 
     useEffect(() => {
         fetch(`http://localhost:5000/alltoys/${activeButton}`)

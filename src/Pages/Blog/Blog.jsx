@@ -1,5 +1,7 @@
+import UseTitle from "../../Hooks/setTitle";
 
 const Blog = () => {
+    UseTitle('Blog')
     return (
         <section className="bg-pink-800 text-gray-100 container mx-auto mt-2 rounded-lg mb-3">
             <div className="container max-w-5xl px-4 py-12 mx-auto">
