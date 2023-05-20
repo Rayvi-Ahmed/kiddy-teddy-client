@@ -1,14 +1,13 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
 
 const ToyDetails = () => {
-
-    const details = useLoaderData()
-    console.log(details)
-
+    const toysInfo = useLoaderData()
+    console.log(toysInfo)
+    const { Quantity, name } = toysInfo
     return (
         <div>
-
+            <h1>{Quantity}</h1>
         </div>
     );
 };
