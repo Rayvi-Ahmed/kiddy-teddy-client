@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa'
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
+import logo from '../../../assets/Images/image (2).ico'
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -24,7 +25,7 @@ const Navbar = () => {
                         title="Company"
                         className="inline-flex items-center"
                     >
-                        <img className="w-10" src="" alt="" />
+                        <img className="w-10" src={logo} alt="" />
                         <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
                             KiddY-Teddy
                         </span>
