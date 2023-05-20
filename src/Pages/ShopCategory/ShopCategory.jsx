@@ -28,23 +28,18 @@ const ShopCategory = () => {
 
             </div>
 
-
-
             <div className='flex gap-4 items-center justify-center'>
                 <button onClick={() => handleActiveButton("Teddy Bear")} className="btn btn-active bg-pink-800">Teddy Bear</button>
-                <button onClick={() => handleActiveButton('Dinosaur')} className="btn btn-active bg-green-800">Dinosaur</button>
-                <button onClick={() => handleActiveButton('Horse')} className="btn btn-active btn-primary">Horse</button>
+                <button onClick={() => handleActiveButton("Dinosaur")} className="btn btn-active bg-green-800">Dinosaur</button>
+                <button onClick={() => handleActiveButton("Horse")} className="btn btn-active btn-primary">Horse</button>
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-8'>
                 {
                     categorys.map(category => <Category
-
                         key={category._id}
                         category={category}
                     >
-
-
                     </Category>)
                 }
             </div>
