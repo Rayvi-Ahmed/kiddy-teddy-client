@@ -1,40 +1,54 @@
+import { useEffect, useState } from 'react';
 import 'react-tabs/style/react-tabs.css';
+import Category from '../Category/Category';
 
 
 const ShopCategory = () => {
+    const [categorys, setCategory] = useState([])
+    const [activeButton, setActiveButton] = useState('')
 
+    useEffect(() => {
+        fetch(`http://localhost:5000/alltoys/${activeButton}`)
+            .then(res => res.json())
+            .then(result => {
+                setCategory(result)
 
+            })
+    }, [activeButton])
+
+    const handleActiveButton = (activeCategoy) => {
+        setActiveButton(activeCategoy)
+    }
 
     return (
-        <div>
-            <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-center flex-nowrap dark:bg-gray-800 dark:text-gray-100">
-                <a rel="noopener noreferrer" href="#" className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 border-b dark:border-gray-400 dark:text-gray-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
-                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-                    </svg>
-                    <span>Architecto</span>
-                </a>
-                <a rel="noopener noreferrer" href="#" className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 border border-b-0 rounded-t-lg dark:border-gray-400 dark:text-gray-50">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
-                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                    </svg>
-                    <span>Corrupti</span>
-                </a>
-                <a rel="noopener noreferrer" href="#" className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 border-b dark:border-gray-400 dark:text-gray-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                    </svg>
-                    <span>Excepturi</span>
-                </a>
-                <a rel="noopener noreferrer" href="#" className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 border-b dark:border-gray-400 dark:text-gray-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
-                    </svg>
-                    <span>Consectetur</span>
-                </a>
+        <div className='container mx-auto mt-8'>
+            <div className='text-gray-800 text-center mb-6'>
+                <h1 className='text-5xl'>Categories</h1>
+                <p className='mt-3'>We have many types of animal toy category which as below you can choose & buy for your lovely kid!</p>
+
             </div>
+
+
+
+            <div className='flex gap-4 items-center justify-center'>
+                <button onClick={() => handleActiveButton("Teddy Bear")} className="btn btn-active bg-pink-800">Teddy Bear</button>
+                <button onClick={() => handleActiveButton('Dinosaur')} className="btn btn-active bg-green-800">Dinosaur</button>
+                <button onClick={() => handleActiveButton('Horse')} className="btn btn-active btn-primary">Horse</button>
+            </div>
+
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-8'>
+                {
+                    categorys.map(category => <Category
+
+                        key={category._id}
+                        category={category}
+                    >
+
+
+                    </Category>)
+                }
+            </div>
+
 
         </div>
     );
