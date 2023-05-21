@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import UseTitle from '../../Hooks/setTitle';
+import error from '../../assets/Images/error-1.png'
 
 const ErrorPage = () => {
     UseTitle('404 error')
@@ -8,6 +9,7 @@ const ErrorPage = () => {
         <section className="flex items-center p-16 bg-pink-800 text-white">
             <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
                 <div className="max-w-md text-center">
+                    <img src={error} alt="" />
                     <h2 className="mb-8 font-extrabold text-9xl dark:text-gray-600">
                         <span className="sr-only">Error</span>404
                     </h2>

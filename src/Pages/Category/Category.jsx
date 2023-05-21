@@ -6,9 +6,9 @@ const Category = ({ category }) => {
 
     return (
         <div>
-            <div className="card h-96 bg-base-100 shadow-xl">
+            <div className="card h-5/6 w-10/12 bg-base-100 shadow-md">
                 <figure className="px-10 pt-10">
-                    <img src={photoUrl} alt="Shoes" className="rounded-xl" />
+                    <img src={photoUrl} alt="Shoes" className="rounded-lg" />
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{productName}</h2>
