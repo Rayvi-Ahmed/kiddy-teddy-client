@@ -14,8 +14,6 @@ import ToyDetails from "../../Pages/ToysDetails/ToyDetails";
 import CategoryDetails from "../../CategoryDetails/CategoryDetails";
 
 
-
-
 export const router = createBrowserRouter([
     {
         path: '/',

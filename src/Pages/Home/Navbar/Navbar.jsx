@@ -75,16 +75,19 @@ const Navbar = () => {
                                 </a>
                             </Link>
                         }
-                        <Link to={'/addToys'}>
-                            <a
-                                href="/banner"
-                                aria-label="About us"
-                                title="Add toys"
-                                className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-pink-400"
-                            >
-                                Add Toys
-                            </a>
-                        </Link>
+                        {
+                            user?.email &&
+                            <Link to={'/addToys'}>
+                                <a
+                                    href="/banner"
+                                    aria-label="About us"
+                                    title="Add toys"
+                                    className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-pink-400"
+                                >
+                                    Add Toys
+                                </a>
+                            </Link>
+                        }
                     </ul>
                     <ul className="flex items-center hidden space-x-8 lg:flex">
                         <li className="text-white">
