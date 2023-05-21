@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import 'react-tabs/style/react-tabs.css';
 import Category from '../Category/Category';
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 
 const ShopCategory = () => {
@@ -9,6 +11,7 @@ const ShopCategory = () => {
     console.log(categorys)
 
     useEffect(() => {
+        Aos.init({ duration: 2000 })
         fetch(`http://localhost:5000/alltoys/${activeButton}`)
             .then(res => res.json())
             .then(result => {
@@ -37,7 +40,7 @@ const ShopCategory = () => {
                 <a onClick={() => handleActiveButton("Combo Pack")} rel="noopener noreferrer" className="flex items-center flex-shrink-0 px-5 py-2 border-b-4 border-gray-700 dark:text-gray-400">Combo Pack</a>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-8'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 ' data-aos="fade-right">
                 {
                     categorys.map(category => <Category
                         key={category._id}
