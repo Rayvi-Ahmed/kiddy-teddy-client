@@ -16,6 +16,8 @@ const ToyDetails = () => {
                         <p><span className='font-bold text-pink-700'>Product Description :</span>{description}</p>
                         <p><span className='font-bold text-pink-700'>Rating : </span>{rating} Star</p>
                         <p><span className='font-bold text-pink-700'>Saller name : </span> {name}</p>
+                        <p><span className='font-bold text-pink-700'>Saller Email : </span> {email}</p>
+                        <p><span className='font-bold text-pink-700'>Available Quantity : </span> {Quantity} Pcs.</p>
                     </div>
                 </a>
 

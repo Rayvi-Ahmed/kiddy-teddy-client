@@ -109,6 +109,7 @@ const AddToys = () => {
                             <option>Teddy Bear</option>
                             <option>Horse</option>
                             <option>Dinosaur</option>
+                            <option>Combo Pack</option>
                         </select>
 
                     </div>

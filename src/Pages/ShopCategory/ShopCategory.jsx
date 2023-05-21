@@ -29,10 +29,12 @@ const ShopCategory = () => {
 
             </div>
 
-            <div className='flex gap-4 items-center justify-center'>
-                <button onClick={() => handleActiveButton("Teddy Bear")} className="btn btn-active bg-pink-800">Teddy Bear</button>
-                <button onClick={() => handleActiveButton("Dinosaur")} className="btn btn-active bg-green-800">Dinosaur</button>
-                <button onClick={() => handleActiveButton("Horse")} className="btn btn-active btn-primary">Horse</button>
+
+            <div className="flex items-center -mx-4 space-x-2 overflow-x-auto overflow-y-hidden sm:justify-center flex-nowrap dark:bg-gray-800 dark:text-gray-100">
+                <a onClick={() => handleActiveButton("Teddy Bear")} rel="noopener noreferrer" className="flex items-center flex-shrink-0 px-5 py-2 border-b-4 border-pink-700 text-pink-400">Teddy Bear</a>
+                <a onClick={() => handleActiveButton("Dinosaur")} rel="noopener noreferrer" className="flex items-center flex-shrink-0 px-5 py-2 border-b-4 border-green-700 text-green-400">Dinosaur</a>
+                <a onClick={() => handleActiveButton("Horse")} rel="noopener noreferrer" className="flex items-center flex-shrink-0 px-5 py-2 border-b-4 border-orange-700 text-orange-500">Horse</a>
+                <a onClick={() => handleActiveButton("Combo Pack")} rel="noopener noreferrer" className="flex items-center flex-shrink-0 px-5 py-2 border-b-4 border-gray-700 dark:text-gray-400">Combo Pack</a>
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-8'>

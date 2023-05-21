@@ -51,18 +51,18 @@ const Navbar = () => {
                                 Blog
                             </a>
                         </li>
-                        {user?.email &&
-                            <Link to={'/allToys'}>
-                                <a
-                                    href="/banner"
-                                    aria-label="All toys"
-                                    title="All toys"
-                                    className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-pink-400"
-                                >
-                                    All Toys
-                                </a>
-                            </Link>
-                        }
+
+                        <Link to={'/allToys'}>
+                            <a
+                                href="/banner"
+                                aria-label="All toys"
+                                title="All toys"
+                                className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-pink-400"
+                            >
+                                All Toys
+                            </a>
+                        </Link>
+
                         {user?.email &&
                             <Link to={'/myToys'}>
                                 <a

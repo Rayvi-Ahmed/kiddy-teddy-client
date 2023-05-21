@@ -9,7 +9,7 @@ const UpdateMyToys = () => {
     const allToys = useLoaderData()
     console.log(allToys)
     const { id } = useParams()
-    const { _id, price, description, Quantity } = allToys
+    const { _id, price, description, Quantity, Category } = allToys
     console.log(id)
     UseTitle('Update product')
 
@@ -25,7 +25,8 @@ const UpdateMyToys = () => {
         const UpdateProduct = {
             price,
             description,
-            Quantity
+            Quantity,
+            Category
         }
         console.log(UpdateProduct)
 
@@ -69,6 +70,18 @@ const UpdateMyToys = () => {
                             <span className="label-text">Price</span>
                         </label>
                         <input name="price" type="text" defaultValue={price} placeholder="$ price" className="input input-bordered" />
+
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Sub Category</span>
+                        </label>
+                        <select name="Category" className="select select-bordered w-full max-w-xs">
+                            <option>Teddy Bear</option>
+                            <option>Horse</option>
+                            <option>Dinosaur</option>
+                            <option>Combo Pack</option>
+                        </select>
 
                     </div>
                     <div className="form-control">
