@@ -35,7 +35,7 @@ const AddToys = () => {
         }
         console.log(addProduct)
 
-        fetch('http://localhost:5000/postToys', {
+        fetch('https://kiddy-teddy-server.vercel.app/postToys', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(addProduct)

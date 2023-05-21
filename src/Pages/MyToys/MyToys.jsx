@@ -13,7 +13,7 @@ const MyToys = () => {
     UseTitle('My Toys')
 
     useEffect(() => {
-        fetch(`http://localhost:5000/mytoys/${user?.email}`)
+        fetch(`https://kiddy-teddy-server.vercel.app/mytoys/${user?.email}`)
             .then(res => res.json())
             .then(result => {
                 console.log(result)
@@ -25,7 +25,7 @@ const MyToys = () => {
     const handleToyDelete = (id) => {
         const proceed = confirm("are you sure to delete ?")
         if (proceed) {
-            fetch(`http://localhost:5000/mytoys/${id}`, {
+            fetch(`https://kiddy-teddy-server.vercel.app/mytoys/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())

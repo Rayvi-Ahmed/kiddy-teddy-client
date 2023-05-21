@@ -12,8 +12,8 @@ const Category = ({ category }) => {
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{productName}</h2>
-                    <p>Price : {price}</p>
-                    <p>Rating : {rating}</p>
+                    <p>Price :$ {price}</p>
+                    <p>Rating : {rating} star</p>
 
                     <div className="card-actions">
                         <Link to={`/toyDetails/${_id}`}>

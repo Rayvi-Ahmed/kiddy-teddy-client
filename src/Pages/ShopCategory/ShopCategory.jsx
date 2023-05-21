@@ -12,7 +12,7 @@ const ShopCategory = () => {
 
     useEffect(() => {
         Aos.init({ duration: 2000 })
-        fetch(`http://localhost:5000/alltoys/${activeButton}`)
+        fetch(`https://kiddy-teddy-server.vercel.app/alltoys/${activeButton}`)
             .then(res => res.json())
             .then(result => {
                 setCategory(result)

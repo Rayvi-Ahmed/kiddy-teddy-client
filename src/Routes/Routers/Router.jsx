@@ -51,7 +51,7 @@ export const router = createBrowserRouter([
             {
                 path: '/updateToys/:id',
                 element: <UpdateMyToys></UpdateMyToys>,
-                loader: ({ params }) => fetch(`http://localhost:5000/mytoys/${params.id}`)
+                loader: ({ params }) => fetch(`https://kiddy-teddy-server.vercel.app/mytoys/${params.id}`)
 
             },
             {
@@ -59,7 +59,7 @@ export const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <ToyDetails></ToyDetails>
                 </PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
+                loader: ({ params }) => fetch(`https://kiddy-teddy-server.vercel.app/details/${params.id}`)
             },
             {
                 path: '/addToys',
@@ -72,7 +72,7 @@ export const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <CategoryDetails></CategoryDetails>
                 </PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
+                loader: ({ params }) => fetch(`https://kiddy-teddy-server.vercel.app/details/${params.id}`)
 
             }
         ]
