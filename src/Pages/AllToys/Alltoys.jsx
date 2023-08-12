@@ -35,7 +35,7 @@ const Alltoys = () => {
             <div className="overflow-x-auto w-full container mx-auto mt-5">
                 <table className="table w-full">
                     {/* head */}
-                    <thead>
+                    <thead className='w-12 text-start'>
                         <tr>
 
                             <th>Saller Name</th>
@@ -43,7 +43,7 @@ const Alltoys = () => {
                             <th>Sub Category</th>
                             <th>Price</th>
                             <th>Quantity</th>
-                            <th>Product Detail</th>
+                            <th >Product Detail</th>
                         </tr>
                     </thead>
                     <tbody>

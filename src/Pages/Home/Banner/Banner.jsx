@@ -5,8 +5,8 @@ import banner3 from '../../../assets/Images/Banner-3.jpg'
 
 const Banner = () => {
     return (
-        <div className='container mx-auto mt-3'>
-            <div className="carousel w-full rounded-lg h-[500px] ">
+        <div className='mt-3'>
+            <div className="carousel w-full h-[500px] ">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src={banner1} className="w-full" />
                     <div className="absolute flex items-center left-0 top-0 h-full bg-gradient-to-r from-[#431c3f] to-[rgba(21, 21, 21, 0)]">

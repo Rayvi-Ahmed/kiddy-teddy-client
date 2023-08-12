@@ -16,8 +16,8 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div className="bg-pink-800">
-            <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div className="">
+            <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 text-black">
                 <div className="relative flex items-center justify-between">
                     <a
                         href="/"
@@ -26,7 +26,7 @@ const Navbar = () => {
                         className="inline-flex items-center"
                     >
                         <img className="w-10" src={logo} alt="" />
-                        <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
+                        <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                             KiddY-Teddy
                         </span>
                     </a>
@@ -36,7 +36,7 @@ const Navbar = () => {
                                 href="/"
                                 aria-label="Home"
                                 title="Home"
-                                className="font-medium tracking-wide  text-white  transition-colors duration-200 hover:text-pink-400"
+                                className="font-medium tracking-wide  text-gray-800  transition-colors duration-200 hover:text-pink-400"
                             >
                                 Home
                             </a>
@@ -46,7 +46,7 @@ const Navbar = () => {
                                 href="/blog"
                                 aria-label="Blog"
                                 title="Blog"
-                                className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-pink-400"
+                                className="font-medium tracking-wide text-gray-800  transition-colors duration-200 hover:text-pink-400"
                             >
                                 Blog
                             </a>
@@ -57,7 +57,7 @@ const Navbar = () => {
                                 href="/banner"
                                 aria-label="All toys"
                                 title="All toys"
-                                className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-pink-400"
+                                className="font-medium tracking-wide text-gray-800  transition-colors duration-200 hover:text-pink-400"
                             >
                                 All Toys
                             </a>
@@ -69,7 +69,7 @@ const Navbar = () => {
                                     href="/banner"
                                     aria-label="My toys"
                                     title="My toys"
-                                    className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-pink-400"
+                                    className="font-medium tracking-wide text-gray-800  transition-colors duration-200 hover:text-pink-400"
                                 >
                                     My Toys
                                 </a>
@@ -117,7 +117,7 @@ const Navbar = () => {
                                 to="/"
                                 aria-label="Name"
                                 title={user?.displayName}
-                                className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-pink-400"
+                                className="font-medium tracking-wide text-gray-800  transition-colors duration-200 hover:text-pink-400"
                             >
                                 {user?.photoURL ? (
                                     <img

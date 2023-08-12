@@ -14,7 +14,7 @@ import banner from '../../assets/Images/Banner-3.jpg'
 const Gallery = () => {
 
     return (
-        <section className=" py-6 bg-pink-800 mt-8 container mx-auto">
+        <section className=" py-6 bg-cyan-600 mt-8 container mx-auto">
 
             <div className='font-bold text-4xl text-center m-3 text-gray-50'>
                 <h1>Toys Gallery</h1>

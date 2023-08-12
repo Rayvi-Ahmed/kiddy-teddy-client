@@ -1,8 +1,8 @@
-import React from 'react';
+
 
 const DiscountBanner = () => {
     return (
-        <div className="p-6 py-12 bg-pink-700 text-gray-100 container mx-auto mt-7">
+        <div className="p-6 py-12 bg-cyan-600 text-gray-200 container mx-auto mt-7">
             <div className="container mx-auto">
                 <div className="flex flex-col lg:flex-row items-center justify-between">
                     <h2 className="text-center text-6xl tracking-tighter font-bold">New Araival!!
