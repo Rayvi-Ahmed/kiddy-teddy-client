@@ -16,6 +16,7 @@ const ShopCategory = () => {
             .then(res => res.json())
             .then(result => {
                 setCategory(result)
+                console.log(result)
 
             })
     }, [activeButton])
@@ -43,6 +44,7 @@ const ShopCategory = () => {
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 mt-8' data-aos="fade-right">
                 {
                     categorys.map(category => <Category
+
                         key={category._id}
                         category={category}
                     >

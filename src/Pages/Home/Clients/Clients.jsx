@@ -13,7 +13,7 @@ const Clients = () => {
     }, [])
     return (
         <div>
-            <h1 className="text-2xl lg:text-4xl text-cyan-500 text-center font-bold py-8">Our Valiuable Clients</h1>
+            <h1 className="text-2xl lg:text-4xl text-cyan-500 text-center font-bold py-8">Our  Clients</h1>
             <Marquee>
                 <div className="flex lg:justify-center items-center gap-3">
 

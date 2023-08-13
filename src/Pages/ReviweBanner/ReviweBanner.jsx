@@ -2,7 +2,7 @@ import React from 'react';
 
 const ReviweBanner = () => {
     return (
-        <div className="flex flex-col max-w-xl p-8 shadow-sm rounded-xl lg:p-12 bg-pink-800 text-gray-100 container mx-auto my-8">
+        <div className="flex flex-col max-w-xl p-8 shadow-sm rounded-xl lg:p-12 bg-cyan-700 text-gray-100 container mx-auto my-8">
             <div className="flex flex-col items-center w-full">
                 <h2 className="text-3xl font-semibold text-center">Your opinion matters!</h2>
                 <div className="flex flex-col items-center py-6 space-y-3">

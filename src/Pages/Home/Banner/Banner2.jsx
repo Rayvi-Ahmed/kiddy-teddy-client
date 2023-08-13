@@ -1,9 +1,36 @@
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer";
 
+import { useEffect } from "react";
 
 const Banner2 = () => {
+    const { ref, inView } = useInView(
+        {
+            threshold: 0.2
+        }
+    )
+    const animation = useAnimation()
+
+    useEffect(() => {
+        if (inView) {
+            animation.start({
+                y: 0,
+                transition: {
+                    type: 'spring', duration: 2, bounce: 0.3
+                }
+
+            })
+        }
+        if (!inView) {
+            animation.start({
+                y: '-100vw'
+            })
+        }
+
+    }, [inView])
     return (
-        <div>
-            <section className="bg-gray-100 text-gray-800">
+        <div ref={ref}>
+            <motion.section className="bg-gray-100 text-gray-800" animate={animation}>
                 <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
                     <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left lg:px-5">
                         <h1 className="text-5xl font-bold leadi sm:text-6xl space-x-5 my-7">Kiddy Teddy
@@ -22,7 +49,7 @@ const Banner2 = () => {
                         <img src="https://img.freepik.com/free-photo/side-view-boy-playing_23-2148551175.jpg?w=900&t=st=1691856263~exp=1691856863~hmac=f941c773d0816ecaa49b4723aedc85125f76326d9202503fcbeda360821b24f0" alt="" className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" />
                     </div>
                 </div>
-            </section>
+            </motion.section>
 
 
         </div>
