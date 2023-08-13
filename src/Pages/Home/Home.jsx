@@ -7,6 +7,7 @@ import ReviweBanner from '../ReviweBanner/ReviweBanner';
 import UseTitle from '../../Hooks/setTitle';
 import Banner2 from './Banner/Banner2';
 import Features from '../../../Features/Features';
+import Clients from './Clients/Clients';
 
 const Home = () => {
     UseTitle('Home')
@@ -16,6 +17,7 @@ const Home = () => {
             <DiscountBanner></DiscountBanner>
             <ShopCategory></ShopCategory>
             <Features></Features>
+            <Clients></Clients>
             <Gallery></Gallery>
             <ReviweBanner></ReviweBanner>
 
