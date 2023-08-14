@@ -5,7 +5,7 @@ const Category = ({ category }) => {
 
     return (
         <div>
-            <div className="max-w-xs  shadow-lg bg-gray-50 text-gray-800 my-5 hover:scale-110 transition">
+            <div className="shadow-lg bg-gray-50 text-gray-800 my-5 hover:scale-110 transition">
                 <img src={photoUrl} alt="" className="object-cover object-center hover:scale-150 transition lg:mx-auto lg:w-[200px] rounded-t-md h-[180px] bg-gray-500" />
                 <div className="flex flex-col justify-between p-6 space-y-8">
                     <div className="space-y-2 lg:h-[180px]">

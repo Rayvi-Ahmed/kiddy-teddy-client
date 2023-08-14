@@ -53,10 +53,10 @@ const SignUp = () => {
     };
 
     return (
-        <div className="w-full max-w-md p-4 m-10 mx-auto rounded-md shadow sm:p-8 bg-pink-800 text-gray-100">
+        <div className="w-full max-w-md p-4 m-10 mx-auto rounded-md shadow sm:p-8 bg-cyan-700 text-gray-800">
 
             <h2 className="mb-3 text-3xl font-semibold text-center">Register Your Account</h2>
-            <p className="text-sm text-center text-gray-400">Already Have an Account?
+            <p className="text-sm text-center text-gray-800">Already Have an Account?
                 <Link to="/Login" rel="noopener noreferrer" className="focus:underline hover:underline"> Log In</Link>
             </p>
             <div className="my-6 space-y-4">
@@ -74,7 +74,7 @@ const SignUp = () => {
                 <hr className="w-full dark:text-gray-400" />
             </div>
 
-            <form onSubmit={handleSubmit} noValidate="" action="" className="flex flex-col w-full max-w-lg p-12 rounded  bg-pink-700  text-gray-100">
+            <form onSubmit={handleSubmit} noValidate="" action="" className="flex flex-col w-full max-w-lg p-12 rounded  bg-cyan-500  text-gray-100">
                 <label htmlFor="username" className="self-start text-xs font-semibold">Your Name</label>
                 <input id="username" name="name" type="text" placeholder="Your Name" className="flex items-center h-12 px-4 mt-2 rounded focus:outline-none focus:ring-2 text-gray-900 hover:border-pink-400 hover:ring-violet-400" />
                 <label htmlFor="photoURL" className="self-start text-xs font-semibold">Photo URL</label>

@@ -35,7 +35,7 @@ const ProductData = ({ toy }) => {
             </td>
             <th>
                 <Link to={`/details/${_id}`}>
-                    <button className="btn border-0 hover:bg-pink-400 bg-pink-800 text-gray-100 btn-sm">Details</button>
+                    <button className="btn border-0 hover:bg-pink-400 bg-cyan-500 text-gray-100 btn-sm">Details</button>
 
                 </Link>
             </th>

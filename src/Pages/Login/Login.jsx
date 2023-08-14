@@ -56,9 +56,9 @@ const Login = () => {
     };
 
     return (
-        <div className="w-full mx-auto max-w-md m-5 p-4 rounded-md shadow sm:p-8 bg-pink-800 text-gray-100">
+        <div className="w-full mx-auto max-w-md m-5 p-4 rounded-md shadow sm:p-8 bg-cyan-700 text-gray-800">
             <h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>
-            <p className="text-sm text-center text-gray-400">Are you new this website ?
+            <p className="text-sm text-center text-gray-800">Are you new this website ?
                 <Link to="/signUp" rel="noopener noreferrer" className="focus:underline hover:underline">Please Register here</Link>
             </p>
             <div className="my-6 space-y-4">
@@ -75,7 +75,7 @@ const Login = () => {
                 <p className="px-3 dark:text-gray-400">OR</p>
                 <hr className="w-full dark:text-gray-400" />
             </div>
-            <form onSubmit={handleSubmit} className="flex flex-col w-full max-w-lg p-12 rounded  bg-pink-700  text-gray-100" noValidate="" action="">
+            <form onSubmit={handleSubmit} className="flex flex-col w-full max-w-lg p-12 rounded  bg-cyan-500  text-gray-100" noValidate="" action="">
                 <label htmlFor="email" className="block text-left text-white text-sm font-bold mb-4">Your Email</label>
 
                 <input id="email" name="email" type="text" placeholder='Your Email' className="shadow appearance-none border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4" required />

@@ -80,9 +80,9 @@ const Navbar = () => {
                             <Link to={'/addToys'}>
                                 <a
                                     href="/banner"
-                                    aria-label="About us"
+                                    aria-label="Add toys"
                                     title="Add toys"
-                                    className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-pink-400"
+                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-pink-400"
                                 >
                                     Add Toys
                                 </a>

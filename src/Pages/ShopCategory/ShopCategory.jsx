@@ -41,7 +41,7 @@ const ShopCategory = () => {
                 <a onClick={() => handleActiveButton("Combo Pack")} rel="noopener noreferrer" className="flex items-center flex-shrink-0 px-5 py-2 border-b-4 border-gray-700 dark:text-gray-400">Combo Pack</a>
             </div>
 
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 mt-8' data-aos="fade-right">
+            <div className='grid grid-cols-1 lg:grid-cols-4 gap-2 mt-8' data-aos="fade-right">
                 {
                     categorys.map(category => <Category
 

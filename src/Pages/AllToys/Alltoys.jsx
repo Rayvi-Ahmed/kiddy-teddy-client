@@ -29,7 +29,7 @@ const Alltoys = () => {
     return (
         <div>
             <div className='container mx-auto mt-5' >
-                <input onChange={(e) => setSearchText(e.target.value)} type="text" placeholder="Search product name" className="input input-bordered input-secondary w-full max-w-xs " /> <button onClick={handleSearch} className='btn bg-pink-800 text-gray-100 mr-4 border-0 hover:bg-pink-400'>Search</button>
+                <input onChange={(e) => setSearchText(e.target.value)} type="text" placeholder="Search product name" className="input input-bordered input-secondary w-full max-w-xs " /> <button onClick={handleSearch} className='btn bg-cyan-500 text-gray-100 mr-4 border-0 hover:bg-pink-400'>Search</button>
             </div>
 
             <div className="overflow-x-auto w-full container mx-auto mt-5">
